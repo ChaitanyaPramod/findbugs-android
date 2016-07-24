@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy'
+    id 'java-gradle-plugin'
+}
+repositories {
+    jcenter()
+}
+
+gradlePlugin {
+    plugins {
+        findbugsAndroidPlugin {
+            id = 'com.chaitanyapramod.findbugs-android'
+            implementationClass = 'com.chaitanyapramod.gradle.android.findbugs.FindBugsAndroidPlugin'
+        }
+    }
+}
+group 'com.chaitanyapramod.gradle'
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    compile localGroovy()
+}
