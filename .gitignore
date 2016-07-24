@@ -1,4 +1,5 @@
-.gradle
+# Ignore gradle files
+.gradle/
 build/
 
 # Ignore Gradle GUI config
@@ -12,3 +13,12 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+.idea
+*.iml
+
+*~
+.DS_Store
+
+# idea generated log files
+build-log.xml
