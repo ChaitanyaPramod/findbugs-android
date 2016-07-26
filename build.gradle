@@ -1,9 +1,8 @@
 plugins {
-    id 'groovy'
     id 'java-gradle-plugin'
-}
-repositories {
-    jcenter()
+    id 'groovy'
+    id 'maven-publish'
+    id "com.jfrog.bintray" version "1.7.1"
 }
 
 gradlePlugin {
@@ -14,10 +13,42 @@ gradlePlugin {
         }
     }
 }
+
 group 'com.chaitanyapramod.gradle'
 version '1.0-SNAPSHOT'
 
+task sourceJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
 
-dependencies {
-    compile localGroovy()
+publishing {
+    publications {
+        plugin(MavenPublication) {
+            from components.java
+
+            artifact sourceJar
+        }
+    }
+}
+
+bintray {
+    user = property('bintray.user')
+    key = property('bintray.key')
+    pkg {
+        publications = ['plugin']
+        repo = 'maven'
+        name = 'findbugs-android-gradle-plugin'
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/ChaitanyaPramod/findbugs-android.git'
+        website = 'https://github.com/ChaitanyaPramod/findbugs-android'
+        issueTrackerUrl = 'https://github.com/ChaitanyaPramod/findbugs-android/issues'
+        githubRepo = 'ChaitanyaPramod/findbugs-android'
+        labels = ['gradle', 'findbugs', 'plugin']
+        version {
+            gpg {
+                sign = true
+            }
+        }
+    }
 }
