@@ -15,7 +15,7 @@ gradlePlugin {
 }
 
 group 'com.chaitanyapramod.gradle'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 task sourceJar(type: Jar) {
     classifier = 'sources'
@@ -41,10 +41,12 @@ bintray {
         name = 'findbugs-android-gradle-plugin'
         licenses = ['MIT']
         vcsUrl = 'https://github.com/ChaitanyaPramod/findbugs-android.git'
-        website = 'https://github.com/ChaitanyaPramod/findbugs-android'
+        websiteUrl = 'https://github.com/ChaitanyaPramod/findbugs-android'
         issueTrackerUrl = 'https://github.com/ChaitanyaPramod/findbugs-android/issues'
         githubRepo = 'ChaitanyaPramod/findbugs-android'
-        labels = ['gradle', 'findbugs', 'plugin']
+        githubReleaseNotesFile = 'CHANGELOG.md'
+
+        labels = ['gradle', 'findbugs', 'plugin', 'android']
         version {
             gpg {
                 sign = true
