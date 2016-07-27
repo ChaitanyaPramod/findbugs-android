@@ -7,7 +7,7 @@ In order to create FindBugs report for Android projects, you need to create `Fin
 In addition, the plugin automatically excludes Generated classes from Android databinding library, android resource, Butterknife and Dagger 2. If you want more added to this list or want it configurable, [open an issue](https://github.com/ChaitanyaPramod/findbugs-android/issues/new).
 
 ## Usage
-Apply the plugin after the Android gradle plugin
+Apply the plugin after the Android gradle plugin. The FindBugs tasks are already hooked to the `check` task.
 ```groovy
 buildscript {
   repositories {
@@ -31,6 +31,13 @@ android {
   }
 }
 ```
+This would create the following Gradle tasks:
+* `findbugsFreeDebug`
+* `findbugsFreeRelease`
+* `findbugsPaidDebug`
+* `findbugsPaidRelease`
+
+Note that running `check` task runs all these findbugs tasks as well.
 
 ## Configuration
 Use the standard findbugs extension to configure the FindBugs tasks
@@ -72,6 +79,7 @@ Contributers will find looking through [sources](https://github.com/gradle/gradl
 This plugin has been heavily inspired by [jacoco-android-gradle-plugin](https://github.com/arturdm/jacoco-android-gradle-plugin)
 
 ## License
+```
 MIT License
 
 Copyright (c) 2016 Chaitanya Pramod
@@ -93,3 +101,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
