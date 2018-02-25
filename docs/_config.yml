@@ -2,8 +2,8 @@ title: findbugs-android Gradle Plugin
 email: findbugs-android@chaitanyapramod.com
 description: >-
   Easily add Findbugs checking to your android project without writing complicated Groovy scripts
-baseurl: "/findbugs-android"
-url: "https://chaitanyapramod.github.io"
+baseurl: ""
+url: "https://findbugs-android.chaitanyapramod.com"
 logo: /images/logo.png
 twitter_username: ChaitanyaPramod
 github_username: ChaitanyaPramod 
