@@ -1,0 +1,35 @@
+title: findbugs-android Gradle Plugin
+email: findbugs-android@chaitanyapramod.com
+description: >-
+  Easily add Findbugs checking to your android project without writing complicated Groovy scripts
+baseurl: "/findbugs-android"
+url: "https://chaitanyapramod.github.io"
+logo: /images/logo.png
+twitter_username: ChaitanyaPramod
+github_username: ChaitanyaPramod 
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/so-simple-theme
+plugins:
+  - jekyll-sitemap
+
+google_analytics: UA-29122928-5
+
+author:
+  name: Chaitanya Pramod
+  twitter: ChaitanyaPramod
+
+copyright: © 2018 Chaitanya Pramod
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
