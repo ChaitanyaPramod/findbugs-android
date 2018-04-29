@@ -66,7 +66,7 @@ public class FindBugsAndroidPlugin implements Plugin<Project> {
         FindBugs task = project.tasks.create("findbugs${variant.name.capitalize()}", FindBugs)
 
         task.description = "Run FindBugs analysis for $variant.name classes"
-        task.group = 'Reporting'
+        task.group = 'Verification'
         task.source = sourceDirs(variant)
         task.classes = project.fileTree(dir: variant.javaCompile.destinationDir, excludes: defaultExcludes)
         task.classpath = variant.javaCompile.classpath
