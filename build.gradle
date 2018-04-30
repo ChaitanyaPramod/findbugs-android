@@ -23,6 +23,25 @@ task sourceJar(type: Jar) {
     from sourceSets.main.allSource
 }
 
+def pomConfig = {
+    licenses {
+        license {
+            name 'MIT License'
+            url 'https://opensource.org/licenses/mit-license.php'
+        }
+    }
+    developers {
+        developer {
+            id 'ChaitanyaPramod'
+            name 'Chaitanya Pramod'
+            email 'me@chaitanyapramod.com'
+        }
+    }
+    scm {
+        url 'https://github.com/ChaitanyaPramod/findbugs-android.git'
+    }
+}
+
 publishing {
     publications {
         plugin(MavenPublication) {
@@ -34,24 +53,7 @@ publishing {
                 root.appendNode('description', 'Gradle plugin that creates FindBugs reports for android projects')
                 root.appendNode('name', 'findbugs-android-gradle-plugin')
                 root.appendNode('url', 'https://findbugs-android.chaitanyapramod.com/')
-                root.children().last() + {
-                    licenses {
-                        license {
-                            name 'MIT License'
-                            url 'https://opensource.org/licenses/mit-license.php'
-                        }
-                    }
-                    developers {
-                        developer {
-                            id 'ChaitanyaPramod'
-                            name 'Chaitanya Pramod'
-                            email 'me@chaitanyapramod.com'
-                        }
-                    }
-                    scm {
-                        url 'https://github.com/ChaitanyaPramod/findbugs-android.git'
-                    }
-                }
+                root.children().last() + pomConfig
            }
         }
     }
