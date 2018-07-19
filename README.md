@@ -57,7 +57,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.chaitanyapramod.findbugs-android'
 
 findbugs {
-  toolsVersion '3.0.1'
+  toolVersion '3.0.1'
   ignoreFailures true
   effort 'max'
   reportLevel 'high'
