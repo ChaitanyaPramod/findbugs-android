@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/jbeguna04/findbugs-android/master/LogoDesign/logotype1.png"></p>
+![Logo](LogoDesign/logotype1.png)
 
 # findbugs-android
 A Gradle plugin that creates FindBugs tasks for each variant of android application or library project
