@@ -1,3 +1,5 @@
+![Logo](LogoDesign/logotype1.png)
+
 # findbugs-android
 A Gradle plugin that creates FindBugs tasks for each variant of android application or library project
 
