@@ -1,7 +1,9 @@
-![Logo](LogoDesign/logotype1.png)
+[![Logo](LogoDesign/logotype1.png)](https://findbugs-android.chaitanyapramod.com/)
 
 # findbugs-android
 A Gradle plugin that creates FindBugs tasks for each variant of android application or library project
+
+## Project site: https://findbugs-android.chaitanyapramod.com
 
 ## Why
 In order to create FindBugs report for Android projects, you need to create `FindBugs` tasks and configure them by providing paths to source code, compiled classes and classpath. It can be troublesome since Android projects can have different flavors and build types, thus requiring additional paths to be set. This plugin provides those tasks already configured for you.
