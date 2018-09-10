@@ -75,6 +75,18 @@ android {
 }
 ```
 
+### Report Format
+By default, XML reports are generated. You can add the following snippet to get HTML reports
+
+```groovy
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+```
+
 ## Contributing
 Contributers will find looking through [sources](https://github.com/gradle/gradle/tree/master/subprojects/code-quality/src/main/groovy/org/gradle/api/plugins/quality) of `FindBugs`, `FindBugsExtension` and `FindBugsPlugin` useful.
 
